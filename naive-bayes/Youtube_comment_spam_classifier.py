@@ -3,10 +3,8 @@ import joblib
 import re
 import string
 from nltk.stem import SnowballStemmer
-import os
-st.write("📁 Current files:", os.listdir())
-model = joblib.load("spam_classifier_model.pkl")
-vectorizer = joblib.load("vectorizer.pkl")
+model = joblib.load("naive-bayes/spam_classifier_model.pkl")
+vectorizer = joblib.load("naive-bayes/vectorizer.pkl")
 stemmer = SnowballStemmer("english")
 def preprocess_and_stem(text):
     text = text.lower()
