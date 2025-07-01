@@ -3,6 +3,8 @@ import joblib
 import re
 import string
 from nltk.stem import SnowballStemmer
+import os
+st.write("📁 Current files:", os.listdir())
 model = joblib.load("spam_classifier_model.pkl")
 vectorizer = joblib.load("vectorizer.pkl")
 stemmer = SnowballStemmer("english")
